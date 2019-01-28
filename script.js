@@ -67,7 +67,7 @@ $.getJSON(
     //Setup path for devs
     var devPath = d3.geo.path()
       .projection(projection)
-      .pointRadius(6);
+      .pointRadius(3);
 
     //Setup zoom behavior
     var zoom = d3.behavior
@@ -165,7 +165,7 @@ $.getJSON(
         space.scale(scale * 3);
         backgroundCircle.attr('r', scale);
         path.pointRadius(2 * scale / scale0);
-        devPath.pointRadius(6 * scale / scale0);
+        devPath.pointRadius(3 * scale / scale0);
         projection.origin(origin);
         circle.origin(origin);
         //globe and stars spin in the opposite direction because of the projection mode
